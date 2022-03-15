@@ -1,0 +1,21 @@
+.clock {
+    font-size: 100px;
+    color: cyan;
+    display: flex;
+    justify-content: center;
+margin-top: 200px;
+
+}
+
+body{
+    background-color: black;
+}
+
+.day {
+    font-size: 40px;
+    color: rgb(100, 128, 255);
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+
+}
