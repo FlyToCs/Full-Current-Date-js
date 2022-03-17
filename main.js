@@ -1,10 +1,10 @@
 function clockrun() {
-  var d = new Date();
-  var min = d.getMinutes();
-  var sec = d.getSeconds();
-  var hour = d.getHours();
+  let d = new Date();
+  let min = d.getMinutes();
+  let sec = d.getSeconds();
+  let hour = d.getHours();
 
-  var p = "AM";
+  let p = "AM";
   if (hour > 12) {
     hour = hour - 12;
     p = "PM";
@@ -19,33 +19,29 @@ function clockrun() {
     sec = "0" + sec;
   }
 
-  var clock = hour + ":" + min + ":" + sec + " " + p;
+  let clock = hour + ":" + min + ":" + sec + " " + p;
 
   document.getElementById("clockid").textContent = clock;
   setTimeout(clockrun, 1000);
 }
 clockrun();
 
-
 function daterun() {
-    var d2 = new Date();
-    var year = d2.getFullYear();
-    var mounth = d2.getMonth()+1;
-    var day = d2.getDate();
-  
+  let d2 = new Date();
+  let year = d2.getFullYear();
+  let mounth = d2.getMonth() + 1;
+  let day = d2.getDate();
 
-    if (day < 10) {
-      day = "0" + day;
-    }
-    if (mounth < 10) {
-        mounth = "0" + mounth;
-    }
-   
-  
-    var today = year + "/" + mounth + "/" + day;
-  
-    document.getElementById("year").textContent = today;
-    setTimeout(daterun, 1000);
+  if (day < 10) {
+    day = "0" + day;
   }
-  daterun();
+  if (mounth < 10) {
+    mounth = "0" + mounth;
+  }
 
+  let today = year + "/" + mounth + "/" + day;
+
+  document.getElementById("year").textContent = today;
+  setTimeout(daterun, 1000);
+}
+daterun();
